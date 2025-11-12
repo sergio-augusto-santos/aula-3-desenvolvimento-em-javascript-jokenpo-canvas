@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokenpô Game</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="src/css/elite-animation.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Jokenpô</h1>
+    <div class="choices">
+      <button class="choice" data-choice="pedra">🪨 Pedra</button>
+      <button class="choice" data-choice="papel">📄 Papel</button>
+      <button class="choice" data-choice="tesoura">✂️ Tesoura</button>
+    </div>
+    <h2 id="resultado">Faça sua escolha!</h2>
+    <button id="reiniciar">Reiniciar</button>
+  </div>  // Seu código repete try/catch para áudio
+  try { victoryAudio.play().catch(()=>{}); } catch(e){}
+  
+  // Poderia ser uma função helper:
+  function playAudio(audio) {
+    if (audio) audio.play().catch(() => {});
+  }  // Seu código repete try/catch para áudio
+  try { victoryAudio.play().catch(()=>{}); } catch(e){}
+  
+  // Poderia ser uma função helper:
+  function playAudio(audio) {
+    if (audio) audio.play().catch(() => {});
+  }
+
+    <canvas id="eliteCanvas"></canvas>
+
+    <audio id="victoryAudio" src="src/audio/Voicy_You win.mp3" preload="auto"></audio>
+    <audio id="defeatAudio" src="src/audio/Voicy_You lose .mp3" preload="auto"></audio>
+    <audio id="doubleKoAudio" src="src/audio/Voicy_Double K O.mp3" preload="auto"></audio>
+
+  <script src="src/script/jokenpo.js"></script>
+  <script src="src/script/elite_animation.js"></script>
+</body>
