@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokenpô Game</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="src/css/elite-animation.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Jokenpô</h1>
+    <div class="stats">
+      <span>Vitórias: <strong id="winCount">0</strong></span>
+      <span>Derrotas: <strong id="loseCount">0</strong></span>
+      <span>Empates: <strong id="drawCount">0</strong></span>
+    </div>
+    <div class="choices">
+      <button class="choice" data-choice="pedra">🪨 Pedra</button>
+      <button class="choice" data-choice="papel">📄 Papel</button>
+      <button class="choice" data-choice="tesoura">✂️ Tesoura</button>
+    </div>
+    <h2 id="resultado">Faça sua escolha!</h2>
+    <button id="reiniciar">Reiniciar</button>
+    <button id="limparPlacar">Limpar Placar</button>
+  </div>
+
+  <canvas id="eliteCanvas"></canvas>
+
+  <audio id="victoryAudio" src="src/audio/Voicy_You win.mp3" preload="auto"></audio>
+  <audio id="defeatAudio" src="src/audio/Voicy_You lose .mp3" preload="auto"></audio>
+  <audio id="doubleKoAudio" src="src/audio/Voicy_Double K O.mp3" preload="auto"></audio>
+
+  <script src="src/script/jokenpo.js"></script>
+  <script src="src/script/elite_animation.js"></script>
+</body>
+</html>
